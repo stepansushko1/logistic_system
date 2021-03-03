@@ -1,9 +1,10 @@
-""" This module """
+""" https://github.com/stepansushko1/logistic_system """
 from random import randint
 
 class Item:
     """ Сlass by which you can describe the goods to be delivered """
     def __init__(self, name, price):
+        """ Initialize the variables """ 
         self.name = name
         self.price = price
 
@@ -15,6 +16,7 @@ class Item:
 class Location:
     """ Class that makes the address (city and post office) """
     def __init__(self, city, postoffice):
+        """ Initialize the variables """
         self.city = city
         self.postoffice = postoffice
 
@@ -23,6 +25,7 @@ class Location:
 class Vehicle:
     """ Reflects the vehicle to which the delivery will be made"""
     def __init__(self, vehicleNo):
+        """ Initialize the variables """
         self.vehicleNo = vehicleNo
         self.isAvailable = True
 
@@ -31,6 +34,7 @@ class Vehicle:
 class Order(Vehicle):
     """ Contains all information about the order and the user """ 
     def __init__(self,user_name,city,postoffice,items):
+        """ Initialize the variables """
         self.orderID = randint(1000000,9999999)
         self.user_name = user_name
         self.city = city
@@ -63,6 +67,7 @@ class LogisticSystem:
     """ Main class, which stores all information about users, orders and transportation """\
 
     def __init__(self, vehicles):
+        """ Initialize the variables """
         self.vehicles = vehicles
         self.orders_lst = []
     
